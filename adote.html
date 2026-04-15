@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CanilConectado</title>
+<style>
+ body {
+        background-color: #ffff;
+        min-height: 100vh;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+header {
+    background-color: #FBE4CD;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1%;
+    border-bottom: 2px solid #fff;
+    position: relative;
+}
+
+.logo img {
+    width: auto;
+    height: 150px;
+}
+
+.header-buttons {
+    position: absolute;
+    top: 25px;
+    right: 80px;
+}
+
+.header-buttons a {
+    color: #7d4b22;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    border: 1px solid #7d4b22;
+    border-radius: 5px;
+}
+
+
+.pesq1 {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 3px 15px;
+        position: absolute;
+        bottom: 5px;
+        right: 80px;
+        width: 20%;
+        border: solid #ffff;
+    }
+
+    .search-filters-container {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo dentro do contêiner */
+    width: 100%;
+    padding: 10px;
+    background-color: #FBE4CD; /* Cor do fundo dos filtros */
+}
+
+.search-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Permite que os filtros se movam para a linha seguinte se necessário */
+}
+
+.search-filters select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #7d4b22;
+    background-color: #fff;
+    color: #7d4b22;
+    width: 150px; /* Ajuste a largura dos filtros conforme necessário */
+}
+
+.link1 {
+    padding: 3px 8px;
+    position: absolute;
+    bottom: 0;
+    font-size: 22px;
+    left: 45%;
+}
+
+.link1 p {
+    color: #7d4b22;
+    text-decoration: none;
+}
+
+.imgprincipal {
+    width: 90%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+}
+
+footer {
+    background-color: #FBE4CD;
+    color: #7d4b22;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer nav {
+    text-align: center;
+}
+
+footer nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+footer nav ul a {
+    color: #7d4b22;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #7d4b22;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.social-icons img {
+    color: #7d4b22;
+    width: 2%;
+}
+
+p6 {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #7d4b22;
+}
+
+@media (max-width: 768px) {
+    .header-buttons {
+        top: 15px;
+        right: 10px;
+    }
+
+    .header-buttons a {
+        margin: 0 5px;
+        padding: 6px 12px;
+        font-size: 14px;
+    }
+
+    .pesq1 {
+        bottom: 5px;
+        right: 10px;
+        padding: 2px 6px;
+        font-size: 14px;
+    }
+
+    .search-filters {
+        flex-direction: column;
+        margin-top: 20px;
+        left: 10px;
+        bottom: auto;
+    }
+
+    .imgprincipal {
+        max-height: 300px;
+    }
+
+    footer nav ul a, .social-icons a {
+        font-size: 12px;
+    }
+
+    p6 {
+        font-size: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .search-filters {
+        flex-direction: column;
+        align-items: center; /* Alinha os filtros ao centro quando empilhados verticalmente */
+    }
+
+    .search-filters select {
+        width: 100%; /* Ajusta a largura para ocupar a largura total no layout vertical */
+    }
+}
+.animal-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .animal-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    max-width: 200px;
+    background-color: #f9f9f9;
+  }
+
+  .animal-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .animal-item h3 {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #7d4b22;
+  }
+
+  .animal-item p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #7d4b22;
+  }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo do Site">
+        </div>
+
+        <div class="link1">
+            <p>Adote um amor<p>
+        </div>
+
+        <div class="header-buttons">
+            <a href="index.html">Página Inicial</a>
+        </div>
+
+        <input type="text" class="pesq1" placeholder="Pesquisar...">
+
+    </header>
+
+    <div class="search-filters-container">
+        <div class="search-filters">
+            <select id="especie" name="especie">
+                <option value="">Espécie</option>
+            </select>
+    
+            <select id="raca" name="raca">
+                <option value="">Raça</option>
+            </select>
+
+            <select id="genero" name="genero">
+                <option value="">Gênero</option>
+            </select>
+    
+            <select id="porte" name="porte">
+                <option value="">Porte</option>
+            </select>
+    
+            <select id="estado" name="estado">
+                <option value="">Estado</option>
+            </select>
+    
+            <select id="idade" name="idade">
+                <option value="">Idade</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="animal-list" id="animal-list">
+        <!-- Animais serão inseridos aqui dinamicamente -->
+    </div>
+
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="politica_privacidade.html">Política de Privacidade</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="icons8-facebook-50.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="icons8-x-50.png" alt="Twitter"></a>
+            <a href="https://instagram.com" target="_blank"><img src="icons8-instagram-50.png" alt="Instagram"></a>
+        </div>
+        <p6>&copy; 2024 Canil Conectado. Todos os direitos reservados.</p6>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animalList = document.getElementById('animal-list');
+
+            function fetchAnimals(filters) {
+                // Substitua pela URL da sua API e envie os filtros como parâmetros
+                fetch('api/animais', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(filters)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    animalList.innerHTML = ''; // Limpa a lista antes de adicionar novos itens
+                    data.animais.forEach(animal => {
+                        const animalItem = document.createElement('div');
+                        animalItem.className = 'animal-item';
+
+                        animalItem.innerHTML = `
+                            <img src="${animal.imagem}" alt="${animal.nome}">
+                            <h3>${animal.nome}</h3>
+                            <p>${animal.cidade}, ${animal.estado}</p>
+                        `;
+                        animalList.appendChild(animalItem);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar animais:', error));
+            }
+
+            // Inicialmente, carregue todos os animais
+            fetchAnimals({});
+
+            // Atualize os filtros
+            document.querySelectorAll('.search-filters select').forEach(select => {
+                select.addEventListener('change', () => {
+                    const filters = {
+                        especie: document.getElementById('especie').value,
+                        raca: document.getElementById('raca').value,
+                        porte: document.getElementById('porte').value,
+                        estado: document.getElementById('estado').value,
+                        idade: document.getElementById('idade').value
+                    };
+                    fetchAnimals(filters);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
