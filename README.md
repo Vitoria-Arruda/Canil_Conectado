@@ -27,7 +27,7 @@ Como o back-end não está presente, funcionalidades que dependem de banco de da
 
 ---
 
-## Funcionalidades previstas no sistema
+## Funcionalidades 
 
 ### Cadastro de usuários
 - cadastro de usuários no sistema
