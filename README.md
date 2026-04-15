@@ -13,7 +13,6 @@ Desenvolver uma plataforma que auxilie no processo de adoção responsável, per
 
 ---
 
-## Escopo deste repositório
 Este repositório disponibiliza somente a camada de **interface e interação do front-end**, incluindo:
 
 - estrutura das páginas
